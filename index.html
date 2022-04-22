@@ -52,10 +52,10 @@
 
       <form action="">
         <h3>user login</h3>
-        <input type="email" placeholder="email" class="box" />
-        <input type="password" placeholder="password" class="box" />
+        <input type="email" id="useremail"   placeholder="email" class="box" />
+        <input type="password" id="userpass"  placeholder="password" class="box" />
         <p>forget your password <a href="#">click here</a></p>
-        <input type="submit" value="login" class="btn" />
+        <input type="submit" id="signupbtn"  value="login" class="btn" />
         <p>or login with</p>
         <div class="buttons">
           <a href="#" class="btn"> google </a>
@@ -111,9 +111,6 @@
         </div>
       </div>
     </section>
-      <!-- ------ cars ------ -->
-    <section class="vehicles" id="vehicles">
-      <h1 class="heading" > <a href="cars.html">All <span>CARS</span></a> </h1>
 
     <section class="vehicles" id="vehicles">
       <h1 class="heading">popular <span>vehicles</span></h1>
@@ -635,5 +632,48 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
+<script>
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "firebase/app";
+    import { getAnalytics } from "firebase/analytics";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD56eRqBnYEF0SwH3T3jtZrthwmrAFE2K4",
+      authDomain: "fir-5bd17.firebaseapp.com",
+      projectId: "fir-5bd17",
+      storageBucket: "fir-5bd17.appspot.com",
+      messagingSenderId: "426974554139",
+      appId: "1:426974554139:web:b7ba7ba014eae06980b0be",
+      measurementId: "G-64MH19ZNLC"
+    };
+    
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    var signupbtn=document.getElementById('signupbtn')
+    var emailsignup=document.getElementById('useremail')
+    var passwordsignup=document.getElementById('userpass')
+    
+    signupbtn.onclick=function{
+      signupbtn.disabled=true;
+      signupbtn.textContent="registering your account ! please wait";
+        firebase.auth().CreateUserEmailAndPassword(emailsignup.Value,passwordsignup.Value).then(function(response){
+          signupbtn.disabled=false;
+      signupbtn.textContent="sign up";
+
+            console.log(response);
+        })
+        .catch(function(error){
+          signupbtn.disabled=false;
+      signupbtn.textContent="sign up";
+            console.log(error);
+        })
+    }
+    </script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
   </body>
 </html>
