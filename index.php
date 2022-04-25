@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://Aunpkg.com/swiper@7/swiper-bundle.min.css"
     />
+    
 
     <!-- font awesome cdn link  -->
     <link
@@ -18,7 +19,8 @@
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="searchbar.html" />
+    <a href="searchbar.php">fdsfs</a>
+    <!-- <link rel="stylesheet" href="searchbar.html" /> -->
   </head>
 
   <body>
@@ -42,7 +44,7 @@
       </div>
 
       <div id="login-btn">
-        <a href="searchbar.html">><button class="btn">search your car</button></a
+        <a href="searchbar.php">><button class="btn">search your car</button></a
         <i class="far fa-user"></i>
       </div>
     </header>
@@ -74,8 +76,9 @@
         src="image/home-img.png"
         alt=""
       />
-
-      <a data-speed="7" href="#" class="btn home-parallax">explore cars</a>
+     <button><a href="car.php">EXPLORE CARS</a></button> 
+<!-- <link rel="stylesheet" href="car.php" > -->
+      <!-- <link rel="stylesheet" href="car.php"><a data-speed="7" href="#" class="btn home-parallax">explore cars</a></link> -->
     </section>
 
     <section class="icons-container">
@@ -210,7 +213,7 @@
 
         <div class="swiper-pagination"></div>
       </div>
-    </section>
+    </section> -->
 
     <section class="services" id="services">
       <h1 class="heading">our <span>services</span></h1>
@@ -276,7 +279,7 @@
           <a href="#" class="btn"> read more</a>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- <section class="featured" id="featured">
       <h1 class="heading"><span>featured</span> cars</h1>
@@ -632,7 +635,7 @@
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
     <script src="js/script.js"></script>
-<script>
+<!-- <script>
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "firebase/app";
     import { getAnalytics } from "firebase/analytics";
@@ -674,6 +677,6 @@
     //     })
     // }
     // </script>
-    // <script defer src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+    // <script defer src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script> -->
   </body>
 </html>
